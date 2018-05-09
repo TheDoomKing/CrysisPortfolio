@@ -310,14 +310,20 @@
 	$('footer').text(copyright);*/
 	
 	// Easter Egg
-	var key = "Alt+N";
-    var newElement = ( /[\+]+/.test(key) ) ? key.replace("+","_") : key;
+	var openKey = "Alt+N";
+    var newElement = ( /[\+]+/.test(openKey) ) ? openKey.replace("+","_") : openKey;
     
     // Binding keys
-    $(document).bind('keydown', key, function assets() {
+    $(document).bind('keydown', openKey, function assets() {
 		window.location.assign("#EasterEgg");
         //$('#_'+ newElement).addClass("dirty");
         //return true;
+    });
+	
+	var closeKey = "Shift+N";
+    var newElement = ( /[\+]+/.test(closeKey) ) ? closeKey.replace("+","_") : closeKey;
+    $(document).bind('keydown', closeKey, function assets() {
+		window.location.assign("#");
     });
 </script>
 <noscript>Your browser does not support JavaScript!</noscript>
