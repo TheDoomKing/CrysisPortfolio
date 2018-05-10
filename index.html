@@ -313,6 +313,12 @@
     $(document).bind('keydown', closeKey, function assets() {
 		window.location.assign("#");
     });
+	
+	var closeKey = "Shift+N";
+    var newElement = ( /[\+]+/.test(closeKey) ) ? closeKey.replace("+","_") : closeKey;
+    $(document).bind('keydown', closeKey, function assets() {
+		window.location.assign("#");
+    });
 </script>
 <noscript>Your browser does not support JavaScript!</noscript>
 </body>
