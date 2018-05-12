@@ -334,14 +334,14 @@
 	
 	function SimulateClick(x, y) {
 		var ev = document.createEvent("MouseEvent");
-		var el = document.elementFromPoint(x,y);
+		var el = document.elementFromPoint(x, y);
 		ev.initMouseEvent(
 			"click",
-			true /* bubble */, true /* cancelable */,
+			true, true,
 			window, null,
-			x, y, 0, 0, /* coordinates */
-			false, false, false, false, /* modifier keys */
-			0 /*left*/, null
+			x, y, 0, 0, 
+			false, false, false, false, 
+			0, null
 		);
 		el.dispatchEvent(ev);
 	}
