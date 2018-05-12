@@ -277,14 +277,19 @@
 		</div>
 	</div>
 </div>
+<!-- <script language="javascript">
+	document.location.href= "https://www.google.co.uk/";
+</script> -->
 <script>
 	$("#Crosshair").hover(
 		function() {
 			$("#Circle").fadeOut(500);
 			$("#Crosshair").fadeTo(600, 1);
+			/*$("#Circle").css("opacity", "0");*/
 		}, function() {
 			$("#Circle").fadeIn(500);
 			$("#Crosshair").fadeTo(600, 0.6);
+			/*$("#Circle").css("opacity", "1");*/
 		}
 	);
 	
@@ -292,12 +297,23 @@
 		function() {
 			$("#Crosshair").fadeOut(500);
 			$("#Circle").fadeTo(600, 1);
+			/*$("#Crosshair").css("opacity", "0");*/
 		}, function() {
 			$("#Crosshair").fadeIn(500);
 			$("#Circle").fadeTo(600, 0.3);
+			/*$("#Crosshair").css("opacity", "1");*/
 		}
 	);
 	
+	$(".close").click(
+		function() {
+			SimulateClick(100, 100);
+		}
+	);
+	
+	/*var copyright = "Copyright Arman Ossi Loko © 2011 - ";
+	copyright += (new Date).getFullYear();
+	$('footer').text(copyright);*/
 	
 	// Easter Egg
 	var openKey = "Alt+N";
@@ -306,12 +322,8 @@
     // Binding keys
     $(document).bind('keydown', openKey, function assets() {
 		window.location.assign("#EasterEgg");
-    });
-	
-	var closeKey = "Shift+N";
-    var CloseElement = ( /[\+]+/.test(closeKey) ) ? closeKey.replace("+","_") : closeKey;
-    $(document).bind('keydown', closeKey, function assets() {
-		window.location.assign("#");
+        //$('#_'+ newElement).addClass("dirty");
+        //return true;
     });
 	
 	var closeKey = "Shift+N";
@@ -319,6 +331,20 @@
     $(document).bind('keydown', closeKey, function assets() {
 		window.location.assign("#");
     });
+	
+	function SimulateClick(x, y) {
+		var ev = document.createEvent("MouseEvent");
+		var el = document.elementFromPoint(x,y);
+		ev.initMouseEvent(
+			"click",
+			true /* bubble */, true /* cancelable */,
+			window, null,
+			x, y, 0, 0, /* coordinates */
+			false, false, false, false, /* modifier keys */
+			0 /*left*/, null
+		);
+		el.dispatchEvent(ev);
+	}
 </script>
 <noscript>Your browser does not support JavaScript!</noscript>
 </body>
