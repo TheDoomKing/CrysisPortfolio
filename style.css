@@ -490,3 +490,40 @@ footer:hover {
     }
 }
 /* End Animations */
+
+/* Mobile Version */
+@media only screen and (max-width: 960px) {
+  #About .Content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #About .LeftSide {
+    order: 2;
+  }
+  #Contact .LeftSide {
+    flex-basis: 100%;
+  }
+  #Contact .RightSide {
+    display: none;
+  }
+  #Circle, #Crosshair {
+    display: none;
+  }
+  
+  footer {
+    display: none;
+  
+    border: 3px solid #f3621b;
+    border-top: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    
+    position: fixed;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    
+    margin-left: -200px;
+  }
+}
+/* End Mobile Version */
