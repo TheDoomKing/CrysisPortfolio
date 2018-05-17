@@ -3,7 +3,7 @@
 /*            Portfolio Style              */
 /*       Created by Arman Ossi Loko        */
 /*                                         */
-/*         Last update: 05/03/2018         */
+/*         Last update: 05/17/2018         */
 /*                                         */
 /*           Copyright © 2018              */
 /*   DUPLICATION OF CODE IS NOT ALLOWED    */
@@ -19,12 +19,20 @@
   src: url("fonts/CRYSISB.ttf");
   font-weight: bold;
 }
+:root {
+  --main-bg-color: #2D2C2C;
+  --anchor-color: #FF822F;
+  --anchor-hover: white;
+  --borderOne: 1px solid #F3621B;
+  --borderThree: 3px solid #F3621B;
+  --border-radius: 5px;
+}
 html {
 	height: 100%;
 }
 body {
 	/*background-color: rgba(0, 0, 0, 1);*/
-	background-color: #2d2c2c;
+	background-color: var(--main-bg-color);
 	background-image: url("img/PortfolioBG.png");
 	background-repeat: no-repeat;
 	/*background-position:bottom;*/
@@ -41,17 +49,17 @@ noscript {
 }
 a {
 	text-decoration: none;
-	color: #FF822F;
+	color: var(--anchor-color);
 	transition: .2s ease-in;
 }
 a:hover {
-  color: white;
+  color: var(--anchor-hover);
 }
 a:visited {
-	color: #FF822F;
+	color: var(--anchor-color);
 }
 a:visited:hover {
-  color: white;
+  color: var(--anchor-hover);
 }
 
 
@@ -114,7 +122,7 @@ a:visited:hover {
 }
 .Popup {
   background: #0A0A0A;
-  border: 1px solid #f3621b;
+  border: var(--borderOne);
   border-radius: 5px;
   
   width: 60%;
@@ -400,14 +408,14 @@ a.Resume::before, a.Resume::after {
   transition: 0.5s;
 }
 a.Resume::before {
-  border-bottom: 3px solid #f3621b;
-  border-left: 3px solid #f3621b;
+  border-bottom: var(--borderThree);
+  border-left: var(--borderThree);
   /*-webkit-transform-origin: 0 100%;*/
   transform-origin: 0 100%;
 }
 a.Resume::after {
-  border-top: 3px solid #f3621b;
-  border-right: 3px solid #f3621b;
+  border-top: var(--borderThree);
+  border-right: var(--borderThree);
   -webkit-transform-origin: 100% 0%;
 }
 a.Resume:hover::after, a.Resume:hover::before {
@@ -428,10 +436,10 @@ footer {
   height: 70px;
   font-size: 20px;
   
-  border: 3px solid #f3621b;
+  border: var(--borderThree);
   border-bottom: none;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
   
   position: fixed;
   bottom: -50px;
@@ -491,6 +499,7 @@ footer:hover {
 }
 /* End Animations */
 
+
 /* Mobile Version */
 @media only screen and (max-width: 960px) {
   #About .Content {
@@ -513,10 +522,10 @@ footer:hover {
   footer {
     display: none;
   
-    border: 3px solid #f3621b;
+    border: var(--borderOne);
     border-top: none;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
     
     position: fixed;
     top: 0;
