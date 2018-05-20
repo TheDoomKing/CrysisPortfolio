@@ -5,7 +5,7 @@
 /*                                         */
 /*         Last update: 05/17/2018         */
 /*                                         */
-/*           Copyright © 2018              */
+/*           Copyright Â© 2018              */
 /*   DUPLICATION OF CODE IS NOT ALLOWED    */
 /*                                         */
 /*-----------------------------------------*/
@@ -61,7 +61,10 @@ a:visited {
 a:visited:hover {
   color: var(--anchor-hover);
 }
-
+img#Cookie {
+  height: 1em;
+  vertical-align: middle;
+}
 
 /* Menu */
 .MainMenu {
