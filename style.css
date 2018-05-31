@@ -3,7 +3,7 @@
 /*            Portfolio Style              */
 /*       Created by Arman Ossi Loko        */
 /*                                         */
-/*         Last update: 05/17/2018         */
+/*         Last update: 05/31/2018         */
 /*                                         */
 /*           Copyright © 2018              */
 /*   DUPLICATION OF CODE IS NOT ALLOWED    */
@@ -115,13 +115,13 @@ img#Cookie {
   left: 0;
   right: 0;
   
-  transition: opacity 500ms;
+  /*transition: opacity 500ms;
   visibility: hidden;
-  opacity: 0;
+  opacity: 0;*/
 }
 .Overlay:target {
-  visibility: visible;
-  opacity: 1;
+  /*visibility: visible;
+  opacity: 1;*/
 }
 .Popup {
   background: #0A0A0A;
@@ -134,7 +134,7 @@ img#Cookie {
   position: relative;
   padding: 20px;
   
-  transition: all 5s ease-in-out;
+  /*transition: all 5s ease-in-out;*/
 }
 .Popup h2 {
   margin-top: 0;

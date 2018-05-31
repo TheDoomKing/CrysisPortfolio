@@ -281,6 +281,34 @@
 	document.location.href= "https://www.google.co.uk/";
 </script> -->
 <script>
+	$("#Contact").hide();
+	$("#About").hide();
+	$("#Portfolio").hide();
+	$("#EasterEgg").hide();
+	
+	$("#AboutArea").click(function() {
+		$("#About").fadeIn(500);
+	});
+	$("#ContactArea").click(function() {
+		$("#Contact").fadeIn(500);
+	});
+	$("#PortfolioArea").click(function() {
+		$("#Portfolio").fadeIn(500);
+	});
+
+	$("#About .Close").click(function() {
+		$("#About").fadeOut(500);
+	});
+	$("#Contact .Close").click(function() {
+		$("#Contact").fadeOut(500);
+	});
+	$("#Portfolio .Close").click(function() {
+		$("#Portfolio").fadeOut(500);
+	});
+	$("#EasterEgg .Close").click(function() {
+		$("#EasterEgg").fadeOut(500);
+	});
+
 	$("#Crosshair").hover(
 		function() {
 			$("#Circle").fadeOut(500);
@@ -305,7 +333,7 @@
 		}
 	);
 	
-	$(".close").click(
+	$(".Close").click(
 		function() {
 			SimulateClick(100, 100);
 		}
@@ -321,15 +349,20 @@
     
     // Binding keys
     $(document).bind('keydown', openKey, function assets() {
-		window.location.assign("#EasterEgg");
-        //$('#_'+ newElement).addClass("dirty");
+		//window.location.assign("#EasterEgg");
+		$("#Portfolio").fadeOut(500);
+		$("#About").fadeOut(500);
+		$("#Contact").fadeOut(500);
+        $("#EasterEgg").fadeIn(500);
+		//$('#_'+ newElement).addClass("dirty");
         //return true;
     });
 	
 	var closeKey = "Shift+N";
     var newElement = ( /[\+]+/.test(closeKey) ) ? closeKey.replace("+","_") : closeKey;
     $(document).bind('keydown', closeKey, function assets() {
-		window.location.assign("#");
+		//window.location.assign("#");
+		$("#EasterEgg").fadeOut(500);
     });
 	
 	function SimulateClick(x, y) {
@@ -345,6 +378,8 @@
 		);
 		el.dispatchEvent(ev);
 	}
+	
+
 </script>
 <noscript>Your browser does not support JavaScript!</noscript>
 </body>
