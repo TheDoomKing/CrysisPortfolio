@@ -3,7 +3,7 @@
 /*            Portfolio Style              */
 /*       Created by Arman Ossi Loko        */
 /*                                         */
-/*         Last update: 05/31/2018         */
+/*         Last update: 06/06/2018         */
 /*                                         */
 /*           Copyright © 2018              */
 /*   DUPLICATION OF CODE IS NOT ALLOWED    */
@@ -505,13 +505,11 @@ footer:hover {
 
 
 /* Mobile Version */
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 985px) {
   #About .Content {
     display: flex;
-    flex-wrap: wrap;
-  }
-  #About .LeftSide {
-    order: 2;
+    flex-wrap: nowrap;
+    flex-direction: column;
   }
   #Contact .LeftSide {
     flex-basis: 100%;
