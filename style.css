@@ -3,7 +3,7 @@
 /*            Portfolio Style              */
 /*       Created by Arman Ossi Loko        */
 /*                                         */
-/*         Last update: 06/06/2018         */
+/*         Last update: 07/06/2018         */
 /*                                         */
 /*           Copyright © 2018              */
 /*   DUPLICATION OF CODE IS NOT ALLOWED    */
@@ -130,6 +130,7 @@ img#Cookie {
   border-radius: 5px;
   
   width: 60%;
+  max-height: 70%;
   
   margin: 70px auto;
   position: relative;
@@ -313,7 +314,7 @@ p.Buttons {
 }
 #Contact-Form .Submit, #Contact-Form .Reset, #About .Resume {
   background: #3C3F45;
-  color: #23262C;
+  color: #D0D0D0;
   cursor: pointer;
   display: inline-block;
   font-size: 18px;
@@ -331,6 +332,7 @@ p.Buttons {
   color: #FFFFFF;
 }
 div#response {
+  margin-top: 50px;
   text-align: center;
 }
 /* End Contact Form */
@@ -452,6 +454,8 @@ footer {
   
   margin-left: -200px;
   
+  font-family: 'Karla', sans-serif;
+
   transition: .2s ease-in-out;
 }
 footer:hover {

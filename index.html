@@ -5,15 +5,16 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	
 	<!-- Site Info -->
-	<meta name="description" content="This is a description of the website!" />
+	<meta name="description" content="The personal portfolio of Arman Ossi Loko - a casual game modder!" />
 	
-	<link href="#" rel="publisher"/> <!-- Page publisher's G+ account -->
+	<link href="#" rel="publisher"/> <!-- G+ account -->
 	
 	<!-- Title -->
 	<title>Arman Ossi Loko - Portfolio</title>
 	
 	<!-- Styles -->
 	<link href="style.css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
 
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="#">
@@ -34,6 +35,15 @@
 	<!-- JS Scripts -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="js/jquery.hotkeys.js"></script>
+	<script>
+		var isFirefox = typeof InstallTrigger !== 'undefined';
+		
+		if(isFirefox) {
+			$('.Popup').css('overflow','auto');
+			$('.Popup').css('background-color', 'green');
+			$('.Popup').attr('style', 'overflow: auto !important');
+		}
+	</script>
 	
 </head>
 <body>
@@ -56,7 +66,7 @@
 			</a>
 		</li>
 		<li id="ExitArea" class="Menu">
-			<a href="https://google.co.uk/" class="Button">
+			<a href="https://google.com/" class="Button">
 				Exit
 			</a>
 		</li>
@@ -202,7 +212,7 @@
 				<div class="RightSide">
 					<h3>Arman Ossi Loko</h3>
 					<p>My name is Arman Ossi Loko and I am a 2D/3D Artist & Web Developer from Bosnia and Herzegovina. Game and Web Development are my passion and I have spent the past 6+ years modding tons of different games, creating various assets for each one of them. Those include GUI changes, playable game maps / levels and 23/3D work, all of which was created 100% from scratch.</p>
-					<p>Currently studying at <a href="https://www.fit.ba/" target="_blank">Faculty of Information Technology</a> in Mostar, most of my time is spent criticizing movies and video games, writing reviews and modding games on a known game modding community named GameBanana. Got any questions or something I can help with? You can hit me up via the contact form on the <a href="#Contact">Contact page</a>.</p>
+					<p>Currently studying at <a href="https://www.fit.ba/" target="_blank">Faculty of Information Technology</a> in Mostar, most of my time is spent criticizing movies and video games, writing reviews and modding games on a known game modding community named GameBanana. Got any questions or something I can help with? You can hit me up via the contact form on the <a onclick='OpenContact()'>Contact page</a>.</p>
 					<p>Hobbies:
 					<ul>
 						<li>Gaming</li>
@@ -210,7 +220,7 @@
 						<li>Web Dev</li>
 					</ul>
 					</p>
-					<div id="Resume"><a href="#" class="Resume">Resume</a></div>
+					<div id="Resume"><a href="#" class="Resume" target="_blank">Resume</a></div>
 				</div>
 			</div>
 		</div>
@@ -224,13 +234,15 @@
 			</h3>
 			<div class="Content">
 				<div class="LeftSide">
-					<form id="Contact-Form" class="Contact-Form" action="#">
+					<form id="Contact-Form" class="Contact-Form" action="#" method="POST">
 						<p><input id="contact_name" type="text" placeholder="Full Name" value="" name="name" required/></p>
 						<p><input id="contact_email" type="email" placeholder="Email Address" value="" name="email" required/></p>
-						<p><textarea id="contact_message" placeholder="Your Message" name="message" rows="15" cols="40"required></textarea></p>
-						<p class="Buttons"><input type="submit" id="contact-submit" class="Submit" value="Send Email" />
-						<input type="reset" id="contact-reset" class="Reset" value="Form Reset"></p>
-						<div id="response"></div>
+						<p><textarea id="contact_message" placeholder="Your Message" name="message" rows="15" cols="40" required></textarea></p>
+						<p class="Buttons">
+							<input type="submit" id="contact-submit" class="Submit" value="Send Email" />
+							<input type="reset" id="contact-reset" class="Reset" value="Form Reset">
+						</p>
+
 					</form>
 				</div>
 				<div class="RightSide">
@@ -246,14 +258,15 @@
 							Bugojno, Bosnia and Herzegovina
 						</li>
 					</ul>
-							<ul class="SocialSection">
-								<li><a href="https://armanossiloko.deviantart.com/" title="DeviantArt" target="_blank"><img src="img/icons/deviantart.png" id="DeviantArt"></a></li>
-								<li><a href="https://www.facebook.com/the.deadviper" title="Facebook" target="_blank"><img src="img/icons/facebook.png" id="Facebook"></a></li>
-								<li><a href="http://gamebanana.com/members/238355" title="GameBanana" target="_blank"><img src="img/icons/gamebanana.png" id="GameBanana"></a></li>
-								<li><a href="http://steamcommunity.com/id/deadviper" title="Steam" target="_blank"><img src="img/icons/steam.png" id="Steam"></a></li>
-								<li><a href="https://twitter.com/ArmanOssiLoko" title="Twitter" target="_blank"><img src="img/icons/twitter.png" id="Twitter"></a></li>
-								<li><a href="https://www.youtube.com/user/GamesSuperstar" title="YouTube" target="_blank"><img src="img/icons/youtube.png" id="YouTube"></a></li>
-							</ul>
+					<ul class="SocialSection">
+						<li><a href="https://armanossiloko.deviantart.com/" title="DeviantArt" target="_blank"><img src="img/icons/deviantart.png" id="DeviantArt"></a></li>
+						<li><a href="https://www.facebook.com/the.deadviper" title="Facebook" target="_blank"><img src="img/icons/facebook.png" id="Facebook"></a></li>
+						<li><a href="http://gamebanana.com/members/238355" title="GameBanana" target="_blank"><img src="img/icons/gamebanana.png" id="GameBanana"></a></li>
+						<li><a href="http://steamcommunity.com/id/deadviper" title="Steam" target="_blank"><img src="img/icons/steam.png" id="Steam"></a></li>
+						<li><a href="https://twitter.com/ArmanOssiLoko" title="Twitter" target="_blank"><img src="img/icons/twitter.png" id="Twitter"></a></li>
+						<li><a href="https://www.youtube.com/user/GamesSuperstar" title="YouTube" target="_blank"><img src="img/icons/youtube.png" id="YouTube"></a></li>
+					</ul>
+					<div id="response"></div>
 				</div>
 			</div>
 		</div>
@@ -277,10 +290,9 @@
 		</div>
 	</div>
 </div>
-<!-- <script language="javascript">
-	document.location.href= "https://www.google.co.uk/";
-</script> -->
+
 <script>
+	/* Menu & Popups */
 	$("#Contact").hide();
 	$("#About").hide();
 	$("#Portfolio").hide();
@@ -308,6 +320,11 @@
 	$("#EasterEgg .Close").click(function() {
 		$("#EasterEgg").fadeOut(500);
 	});
+	
+	function OpenContact() {              
+		$('#About').fadeOut(500);
+		$('#Contact').fadeIn(500);
+	}
 
 	$("#Crosshair").hover(
 		function() {
@@ -338,12 +355,10 @@
 			SimulateClick(100, 100);
 		}
 	);
+	/* End Menu & Popups */
 	
-	/*var copyright = "Copyright Arman Ossi Loko © 2011 - ";
-	copyright += (new Date).getFullYear();
-	$('footer').text(copyright);*/
 	
-	// Easter Egg
+	/* Easter Egg */
 	var openKey = "Alt+N";
     var newElement = ( /[\+]+/.test(openKey) ) ? openKey.replace("+","_") : openKey;
     
@@ -354,8 +369,6 @@
 		$("#About").fadeOut(500);
 		$("#Contact").fadeOut(500);
         $("#EasterEgg").fadeIn(500);
-		//$('#_'+ newElement).addClass("dirty");
-        //return true;
     });
 	
 	var closeKey = "Shift+N";
@@ -364,7 +377,10 @@
 		//window.location.assign("#");
 		$("#EasterEgg").fadeOut(500);
     });
+	/* End Easter Egg */
 	
+	
+	/* Click Simulation Test  */
 	function SimulateClick(x, y) {
 		var ev = document.createEvent("MouseEvent");
 		var el = document.elementFromPoint(x, y);
@@ -378,8 +394,52 @@
 		);
 		el.dispatchEvent(ev);
 	}
+	/* End Click Simulation Test */
 	
-
+	
+	/* Browser Determination */
+	var isFirefox = typeof InstallTrigger !== 'undefined';
+	if(isFirefox) {
+		//$('.Popup').css('overflow','auto');
+		$('.Popup').attr('style', 'overflow: auto');
+	}
+	/* End Browser Determination */
+	
+	
+	/* Form Validation */
+	function PrepareError(){
+		$('#response').css('color','#D8000C');
+		$('#response').css('border','2px solid #F57777');
+		$('#response').css('background-color','rgb(204, 114, 114)');
+		$('#response').css('font-family','\'Karla\', sans-serif');
+		$('#response').css('font-weight','bold');
+	}
+	function CheckEmail(email) {
+		var reg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		return reg.test(email);
+	}
+	function CheckName(fullName) {
+		var nameReg = /^[a-zA-Z]+(([ -][a-zA-Z ])?[a-zA-Z]*)*$/;
+		return nameReg.test(fullName);
+	}
+	function Validate() {
+		var yourName = $("#contact_name").val();
+		var yourMail = $("#contact_email").val();
+		var msg = $('#contact_message').val();
+	
+		if (!(CheckEmail(yourMail) && CheckName(yourName) && msg.length > 0)) {
+			PrepareError();
+			$('#response').text("Your haven't filled all the required fields yet!");
+		} else if (!CheckEmail(yourMail)) {
+			PrepareError();
+			$('#response').text("Your e-mail doesn't seem to work properly!");
+		} else if (!CheckName(yourName)) {
+			PrepareError();
+			$('#response').text("Your name contains inappropriate symbols!");
+		}
+	}
+	$("#contact-submit").click("click", Validate);
+	/* End Form Validation */
 </script>
 <noscript>Your browser does not support JavaScript!</noscript>
 </body>
