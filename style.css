@@ -263,6 +263,10 @@ div#CrosshairTop {
 /*#Portfolio .Content .Project .ProjectSide a img:hover {
   filter: grayscale(100%);
 }*/
+#ProfilePic {
+    filter: invert(1);
+    opacity: 0.2;
+}
 /* End About Page Edits */
 
 
