@@ -312,6 +312,7 @@
 		$("#About").fadeOut(500);
 	});
 	$("#Contact .Close").click(function() {
+		CleanError();
 		$("#Contact").fadeOut(500);
 	});
 	$("#Portfolio .Close").click(function() {
@@ -414,6 +415,10 @@
 		$('#response').css('font-family','\'Karla\', sans-serif');
 		$('#response').css('font-weight','bold');
 	}
+	function CleanError(){
+		$("#response").removeAttr("style");
+		$("#response").text("");
+	}
 	function CheckEmail(email) {
 		var reg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 		return reg.test(email);
@@ -439,6 +444,7 @@
 		}
 	}
 	$("#contact-submit").click("click", Validate);
+	$("#contact-reset").click("click", CleanError);
 	/* End Form Validation */
 </script>
 <noscript>Your browser does not support JavaScript!</noscript>
